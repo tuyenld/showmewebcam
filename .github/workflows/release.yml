@@ -51,11 +51,11 @@ jobs:
           tar -zxf buildroot-${{ env.BUILDROOT_VERSION }}.tar.gz
           mv buildroot-${{ env.BUILDROOT_VERSION }} ${{ env.BUILDROOT_DIR }}
 
-      - name: Cache Build
-        uses: actions/cache@v2
-        with:
-          path: output
-          key: ${{ matrix.raspberry }}-${{ env.BUILDROOT_DIR }}-${{ env.BUILDROOT_VERSION }}-${{ env.CACHE_VERSION }}
+#       - name: Cache Build
+#         uses: actions/cache@v2
+#         with:
+#           path: output
+#           key: ${{ matrix.raspberry }}-${{ env.BUILDROOT_DIR }}-${{ env.BUILDROOT_VERSION }}-${{ env.CACHE_VERSION }}
 
       - name: Build Image
         run: |
