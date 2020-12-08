@@ -18,7 +18,7 @@ defaults:
 
 jobs:
   build:
-    runs-on: buster
+    runs-on: debian-buster
     env:
       BUILDROOT_VERSION: '2020.08.2'
       BUILDROOT_DIR: 'buildroot'
