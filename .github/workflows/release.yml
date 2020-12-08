@@ -18,7 +18,7 @@ defaults:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: buster
     env:
       BUILDROOT_VERSION: '2020.08.2'
       BUILDROOT_DIR: 'buildroot'
@@ -60,7 +60,7 @@ jobs:
       - name: Build Image
         run: |
           # Force a piwebcam rebuild every time
-          rm -fr output/*/build/piwebcam*
+          rm -fr output/
           sh build-showmewebcam.sh ${{ matrix.raspberry }}
           cp output/${{ matrix.raspberry }}/images/sdcard.img sdcard-${{ matrix.raspberry }}-${{ env.SHA }}.img
 
