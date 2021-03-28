@@ -58,6 +58,7 @@ config_frame () {
 333333
 400000
 666666
+2000000
 EOF
 }
 
@@ -75,6 +76,7 @@ config_usb_webcam () {
   config_frame mjpeg m 1600  900
   config_frame mjpeg m 1600 1200
   config_frame mjpeg m 1920 1080
+  config_frame mjpeg m 2592 1944
 
   mkdir -p functions/uvc.usb0/streaming/header/h
   ln -s functions/uvc.usb0/streaming/mjpeg/m  functions/uvc.usb0/streaming/header/h
